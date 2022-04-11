@@ -47,6 +47,7 @@ int execute_choice(Choice *c, int len){
     print_between((c+i)->text_start, (c+i)->text_end);
     printf("\n");
   }
+  printf(">> ");
   scanf("%d", &choice);
   if (choice == 0) exit_gracefully(0);
   return choice-1;

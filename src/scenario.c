@@ -53,6 +53,7 @@ int read_node(char *buffer, int *point, int buff_len, Node *n) {
       break;
     case '0' ... '9':
       c += read_number(c, &n->index);
+      while (*c == ' ' || *c == '\t') c++;
       if (*c == '-') {
         n->text_start = c + 1;
 	int action_flag = 0, skip_flag=0, loop_flag=1;
